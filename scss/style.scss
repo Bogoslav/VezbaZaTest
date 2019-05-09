@@ -8,6 +8,7 @@
     font-family: $logo_font;
     span{color:$main_red;}
 }
+html{scroll-behavior: smooth;}
 
 main,footer {
     padding:2em 15em;
@@ -63,5 +64,65 @@ main{
         margin:25% auto 0;
         border-bottom: 1px solid $main_red;
         width:60%;
+    }
+}
+
+section{
+    padding:2em 10em;
+    @include clearfix;
+    h2{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 3em;
+
+
+    }
+
+}
+.buttons{
+    display: inline-block;
+    padding: 1em 3em;
+    background-color: $main_red;
+    color:white;
+    margin: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover{ background-color:$red_dark;}
+}
+#catalog{
+    background-color: $grey_background;
+
+.column{
+    float:left;
+    width:25%;
+    text-align: center;
+
+    img{width:90%;}
+}
+}
+
+#pricing{
+    text-align: center;
+
+    .buttons {display: none;}
+
+    table{
+        width:60%;
+        margin:0 auto;
+        border-collapse: collapse;
+        td,th{
+            padding:1em;
+        }
+        thead{
+            background-color: $main_red;
+            th{color:white;}
+            th:first-child {background-color: $red_dark;
+            }
+        }
+        tbody{
+            tr{ border-bottom: 1px solid $main_text_color;}
+            td:first-child {background-color: $grey_background;}
+            font-weight: bold;
+        }
     }
 }
